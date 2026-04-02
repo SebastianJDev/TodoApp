@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App - Gestion de Tareas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Gestion de Tareas</h1>
+        <p>Crear, editar, eliminar y completar tareas por estado.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Nueva tarea</h2>
+        <form id="taskForm">
+          <input id="title" type="text" placeholder="Titulo" maxlength="120" required />
+          <textarea id="description" placeholder="Descripcion" maxlength="500"></textarea>
+          <select id="status">
+            <option value="pendiente">Pendiente</option>
+            <option value="en_proceso">En proceso</option>
+            <option value="completada">Completada</option>
+          </select>
+          <button type="submit">Guardar tarea</button>
+        </form>
+        <p id="message" class="message"></p>
+      </section>
+
+      <section class="board">
+        <article>
+          <h3>Pendiente</h3>
+          <ul id="pendiente" class="task-list"></ul>
+        </article>
+        <article>
+          <h3>En proceso</h3>
+          <ul id="en_proceso" class="task-list"></ul>
+        </article>
+        <article>
+          <h3>Completada</h3>
+          <ul id="completada" class="task-list"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

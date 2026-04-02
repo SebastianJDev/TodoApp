@@ -1,0 +1,6 @@
+tests/
+*.test.js
+node_modules/
+.git/
+.env
+*.db
